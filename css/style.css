@@ -1,0 +1,175 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+header,
+footer,
+aside,
+nav,
+article,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.6;
+  margin: 0 auto;
+  background-color: #0d192b;
+  font-size: 18px;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  padding: 1em;
+  color: white;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.hover:hover {
+  color: #00fff7;
+}
+
+.card {
+  background-color: #14253d;
+  padding: 1.5em;
+  padding-bottom: .5em;
+  border-radius: .75em;
+  max-width: 21.75em;
+}
+
+.card .overlay {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.card .overlay .img-nft {
+  width: 100%;
+  border-radius: .75em;
+}
+
+.card .overlay .overlayin {
+  background-color: rgba(0, 255, 247, 0.4);
+  height: 100%;
+  width: 100%;
+  border-radius: .75em;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 70px;
+  transition: opacity .5s;
+}
+
+.card .overlay .overlayin:hover {
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.card h1 {
+  font-size: 1.6rem;
+  margin-top: .8em;
+  margin-bottom: .6em;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.card p {
+  color: #8bacda;
+  margin-bottom: 1em;
+}
+
+.card .price {
+  justify-content: space-between;
+}
+
+.card .price .eth,
+.card .price .time {
+  align-items: baseline;
+  gap: .4em;
+}
+
+.card .price .eth p {
+  color: #00fff7;
+  font-weight: 700;
+}
+
+.card .creator {
+  align-items: center;
+  gap: .8em;
+  border-top: 1px solid #2f415b;
+  margin-bottom: 0;
+}
+
+.card .creator img {
+  width: 1.875em;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.card .creator p {
+  margin-top: 1em;
+}
+
+.card .creator p a {
+  text-decoration: none;
+  color: white;
+  transition: all .5s;
+}
+
+.card .creator p a:hover {
+  color: #00fff7;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */

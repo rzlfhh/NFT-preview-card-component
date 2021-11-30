@@ -1,0 +1,188 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+header,
+footer,
+aside,
+nav,
+article,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+// primary col
+$col-softblue: hsl(215, 51%, 70%);
+$col-cyan: hsl(178, 100%, 50%);
+$col-cyan-t: hsla(178, 100%, 50%, 0.4);
+
+//neutral col
+$col-vdbluemainbg: hsl(217, 54%, 11%);
+$col-vdbluecardbg: hsl(216, 50%, 16%);
+$col-vdblueline: hsl(215, 32%, 27%);
+$col-white: hsl(0, 0%, 100%);
+
+img {
+    display: block;
+    // width: 100%;
+}
+
+body {
+    font-family: 'Outfit',
+        sans-serif;
+    line-height: 1.6;
+    margin: 0 auto;
+    background-color: $col-vdbluemainbg;
+    font-size: 18px;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    padding: 1em;
+    color: $col-white;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.hover {
+    &:hover {
+        color: $col-cyan;
+    }
+}
+
+.card {
+    background-color: $col-vdbluecardbg;
+    padding: 1.5em;
+    padding-bottom: .5em;
+    border-radius: .75em;
+    max-width: 21.75em;
+
+    .overlay {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+
+        .img-nft {
+            width: 100%;
+            border-radius: .75em;
+        }
+
+        .overlayin {
+            background-color: $col-cyan-t;
+            height: 100%;
+            width: 100%;
+            border-radius: .75em;
+            display: grid;
+            place-items: center;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            position: absolute;
+            padding: 70px;
+            transition: opacity .5s;
+
+            &:hover {
+                opacity: 1;
+                transition: opacity .5s;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-top: .8em;
+        margin-bottom: .6em;
+        cursor: pointer;
+        transition: all .5s;
+    }
+
+    p {
+        color: $col-softblue;
+        margin-bottom: 1em;
+    }
+
+    .price {
+        justify-content: space-between;
+
+        .eth,
+        .time {
+            align-items: baseline;
+            gap: .4em;
+        }
+
+        .eth p {
+            color: $col-cyan;
+            font-weight: 700;
+        }
+    }
+
+    .creator {
+        align-items: center;
+        gap: .8em;
+        border-top: 1px solid $col-vdblueline;
+        margin-bottom: 0;
+
+        img {
+            width: 1.875em;
+            border: 1px solid $col-white;
+            border-radius: 50%;
+        }
+
+        p {
+            margin-top: 1em;
+
+            a {
+                text-decoration: none;
+                color: $col-white;
+                transition: all .5s;
+
+                &:hover {
+                    color: $col-cyan;
+                }
+            }
+        }
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
